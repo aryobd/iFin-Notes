@@ -16,12 +16,11 @@ select	agreement_no --> BLANK
 from	ifinams.dbo.asset
 where	code = '4120036211' -- asset code
 
-exec dbo.xsp_mtn_return_rented_asset @p_agreement_no = N'0000539.4.01.09.2020'	-- no agreement
-									 ,@p_plat_no = N'B9985PCQ'					-- plat no
-									 ,@p_chassis_no = N'MHKB3BA1JLK070884'		-- chassis no
-									 ,@p_mtn_remark = N'Perubahan Status Nopol B9985PCQ Return menjadi RENTED'	
-									 ,@p_mtn_cre_by = N'Ari Wibowo'	
-
+exec  dbo.xsp_mtn_return_rented_asset  @p_agreement_no = N'0000539.4.01.09.2020'	-- no agreement
+									   ,@p_plat_no = N'B9985PCQ'					-- plat no
+									   ,@p_chassis_no = N'MHKB3BA1JLK070884'		-- chassis no
+									   ,@p_mtn_remark = N'Perubahan Status Nopol B9985PCQ Return menjadi RENTED'	
+									   ,@p_mtn_cre_by = N'Ari Wibowo'	
 
 select	agreement_no
 		,agreement_external_no
